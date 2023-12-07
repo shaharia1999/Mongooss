@@ -11,9 +11,9 @@ const myPromise = new Promise((resolved, rejected) => {
     }, 500);
   }
 });
-myPromise
-  .then((res) => console.log("then" + res))
-  .catch((err) => console.log(err));
+// myPromise
+//   .then((res) => console.log("then" + res))
+//   .catch((err) => console.log(err));
 
 // maltiful Promise asyn need to promise all function
 const userIds = [1, 2, 3, 4, 5];
@@ -22,11 +22,11 @@ for (let i = 0; i < userIds.length; i++) {
   const userId = userIds[i];
   userData.push(myPromise);
 }
-Promise.all(userData).then((res) =>{
-  return(
-    console.log(res)
-  )
-});
+// Promise.all(userData).then((res) =>{
+//   return(
+//     console.log(res)
+//   )
+// });
 
 // async await
 const promise = new Promise((resoled, rejected) => {
@@ -44,7 +44,7 @@ getData();
 function normal() {
   promise.then((res) => console.log(res));
 }
-normal();
+// normal();
 
 // Error handling
 
@@ -71,4 +71,4 @@ async function handleError() {
 //   // });
 //   // console.log('Internal server Error');
 // }
-handleError();
+// handleError();
